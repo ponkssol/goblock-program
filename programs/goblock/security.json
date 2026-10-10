@@ -3,6 +3,8 @@
   "logo": "https://raw.githubusercontent.com/ponkssol/goblock-program/main/logo.png",
   "description": "A direct Solana swap.",
   "project_url": "https://github.com/ponkssol/goblock-dex",
-  "source_code": "https://github.com/ponkssol/goblock-program",
-  "preferred_languages": ["en"]
+  "contacts": ["link:https://github.com/ponkssol/goblock-program"],
+  "policy": "https://github.com/ponkssol/goblock-program",
+  "preferred_languages": ["en"],
+  "source_code": "https://github.com/ponkssol/goblock-program"
 }
