@@ -13,8 +13,6 @@ program_entrypoint!(process_instruction);
 no_allocator!();
 nostd_panic_handler!();
 
-#[cfg_attr(any(target_arch = "bpf", target_os = "solana"), link_section = ".solana.security.txt")]
-#[no_mangle]
 #[used]
 static SECURITY_TXT: &str = "\
 =======BEGIN SECURITY.TXT V1=======
@@ -37,6 +35,7 @@ fn process_instruction(
     accounts: &mut [AccountView],
     data: &[u8],
 ) -> ProgramResult {
+    core::hint::black_box(SECURITY_TXT);
     let signer = accounts.first().ok_or(ProgramError::NotEnoughAccountKeys)?;
     if !signer.is_signer() {
         return Err(ProgramError::MissingRequiredSignature);
