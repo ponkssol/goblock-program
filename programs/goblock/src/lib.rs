@@ -13,6 +13,21 @@ program_entrypoint!(process_instruction);
 no_allocator!();
 nostd_panic_handler!();
 
+#[cfg_attr(any(target_arch = "bpf", target_os = "solana"), link_section = ".solana.security.txt")]
+#[no_mangle]
+#[used]
+static SECURITY_TXT: &str = "\
+=======BEGIN SECURITY.TXT V1=======
+name: goblock
+project_url: https://github.com/ponkssol/goblock-dex
+contacts: link:https://github.com/ponkssol/goblock-program
+policy: https://github.com/ponkssol/goblock-program
+preferred_languages: en
+source_code: https://github.com/ponkssol/goblock-program
+logo: https://raw.githubusercontent.com/ponkssol/goblock-program/main/logo.png
+=======END SECURITY.TXT V1=======
+";
+
 const ROUTE: u8 = 0;
 const MAX_INNER: usize = 16;
 const MAX_ACCOUNTS: usize = 22;

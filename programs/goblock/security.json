@@ -1,6 +1,6 @@
 {
   "name": "goblock",
-  "logo": "https://raw.githubusercontent.com/ponkssol/goblock-dex/main/public/goblock-logo.png",
+  "logo": "https://raw.githubusercontent.com/ponkssol/goblock-program/main/logo.png",
   "description": "A direct Solana swap.",
   "project_url": "https://github.com/ponkssol/goblock-dex",
   "source_code": "https://github.com/ponkssol/goblock-program",
