@@ -17,14 +17,6 @@ const ROUTE: u8 = 0;
 const MAX_INNER: usize = 16;
 const MAX_ACCOUNTS: usize = 22;
 
-/// `route` forwards whitelisted instructions and logs `goblock:`.
-///
-/// Data layout, little-endian:
-/// `u8 tag` (0), `u8 inner_count`, then for each inner instruction:
-/// `u8 program_index`, `u8 account_count`, `u8` account indexes,
-/// `u16 data_len`, instruction bytes.
-/// Account 0 is the signer. Every program id and account used by an inner
-/// instruction is included in this instruction's account list.
 fn process_instruction(
     program_id: &Address,
     accounts: &mut [AccountView],
