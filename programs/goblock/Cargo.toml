@@ -1,0 +1,17 @@
+[package]
+name = "goblock"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "goblock"
+crate-type = ["cdylib"]
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+
+[dependencies]
+pinocchio = { version = "0.11.2", default-features = false, features = ["cpi", "copy"] }
+solana-program-log = "1.2"

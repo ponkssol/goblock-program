@@ -1,0 +1,6 @@
+{
+  "name": "goblock",
+  "programId": "4gZQouUvsDc4zEd3msfnw9or4uxtSBxZejoy6XcsGTPb",
+  "upgradeAuthority": "GoBLK9ujNfaaoap2mYr2wA6j4okNcw29K9RTBozrt7zg",
+  "loader": "BPFLoaderUpgradeable"
+}
